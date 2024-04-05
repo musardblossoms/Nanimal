@@ -193,10 +193,13 @@ const Experience = () => (
       position="JP Morgan Chase & Co."
       date="October 2022 - July 2023"
       details={[
-        "• Collaborated with teams to develop robust solutions meeting client requirements for functionality, scalability, and performance, ensuring continuous improvement.",
-        "• Led cross-functional efforts to implement innovative software solutions, enhancing operational efficiency and driving excellence.",
-        "• Ensured high code quality through rigorous reviews, modernizing legacy systems for improved functionality and stability.",
-        "• Proactively expanded skills in technologies such as React, Java, SpringBoot, Amazon Web Services, and Typescript, contributing to daily operations and project success."
+        " • Developed and maintained robust, scalable backend solutions using Java/J2EE and Spring Framework." ,
+        " • Led the development of responsive user interfaces utilizing ReactJS, ensuring optimal user experience." ,
+        " • Implemented CI/CD practices and tools like Jenkins for efficient software delivery." ,
+        " • Contributed to the design and optimization of relational databases such as MySQL." ,
+        " • Implemented containerization using Docker and orchestration with Kubernetes." ,
+        " • Worked on serverless computing and event-driven architectures to enhance system efficiency." ,
+        " • Practiced Agile/Scrum methodologies and utilized Jira for project management." ,
       ]}
     />
     <ExperienceEntry
