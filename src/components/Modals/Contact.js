@@ -1,10 +1,12 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Modal from "./Modal";
 import './ModalStyles/modalStyles.css'
 import './ModalStyles/contactStyles.css'
 import emailjs from '@emailjs/browser';
 
 const Contact = ({ closeFn = () => null, open = false }) => {
+  const [emailSent, setEmailSent] = useState(false); 
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (event.target.classList.contains('modal--mask')) {
@@ -32,10 +34,11 @@ const Contact = ({ closeFn = () => null, open = false }) => {
       })
       .then(
         () => {
-          console.log('SUCCESS!');
+          setEmailSent(true);
+          console.log('MESSAGE SENT SUCCESSFULLY!');
         },
         (error) => {
-          console.log('FAILED...', error.text);
+          console.log('FAILED TO SEND MESSAGE...', error.text);
         },
       );
       e.target.reset();
@@ -53,6 +56,11 @@ const Contact = ({ closeFn = () => null, open = false }) => {
               </button>
             </h1>
             
+            {emailSent ? ( 
+              <h2 >
+                Thank you for your message - I'm looking forward to reading it!
+              </h2>
+            ) : (
               <section>
                 <div className="contact-container">
                   <form ref={form} onSubmit={sendEmail} className="contact-form">
@@ -64,6 +72,7 @@ const Contact = ({ closeFn = () => null, open = false }) => {
                   </form>
                 </div>
               </section>
+            )}
           </div>
         </div>
       </div>

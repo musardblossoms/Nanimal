@@ -193,7 +193,7 @@ const Experience = () => (
       position="JP Morgan Chase & Co."
       date="October 2022 - July 2023"
       details={[
-        " • Developed and maintained robust, scalable backend solutions using Java/J2EE and Spring Framework." ,
+        " • Developed and maintained robust, scalable backend solutions using Java/J2EE and Spring Framework, resulting in a 25% increase in the data analysis efficiency." ,
         " • Led the development of responsive user interfaces utilizing ReactJS, ensuring optimal user experience." ,
         " • Implemented CI/CD practices and tools like Jenkins for efficient software delivery." ,
         " • Contributed to the design and optimization of relational databases such as MySQL." ,
