@@ -16,18 +16,12 @@ const headerStyles = StyleSheet.create({
     borderBottomColor: "#112131",
     borderBottomStyle: "solid",
     alignItems: "stretch",
-    marginBottom: 10, // Add margin bottom to create space between sections
+    marginBottom: 10,
   },
   detailColumn: {
     flexDirection: "column",
     flexGrow: 9,
     textTransform: "uppercase",
-  },
-  linkColumn: {
-    flexDirection: "column",
-    flexGrow: 2,
-    alignSelf: "flex-end",
-    justifySelf: "flex-end",
   },
   name: {
     fontSize: 24,
@@ -52,12 +46,11 @@ const Header = () => (
   <View style={headerStyles.container}>
     <View style={headerStyles.detailColumn}>
       <Text style={headerStyles.name}>Nan Wroblewski</Text>
-      <Text style={headerStyles.subtitle}>Philadelphia, Pennsylvania (Able to Relocate)</Text>
-      <Text style={headerStyles.subtitle}>+1 330-704-0488 | vr000nan@gmail.com</Text>
-      <Text style={headerStyles.link}>
-        <Link href="https://www.linkedin.com/in/nan-wroblewski-09547a224/">LinkedIn</Link> |{' '}
-        <Link href="https://github.com/vr000nan">GitHub</Link> |{' '}
-        <Link href="nanimal.dev">Portfolio</Link>
+      <Text style={headerStyles.subtitle}>
+        +1 (330) 704-0488 |{' '}
+        <Link src="mailto:vr000nan@gmail.com">vr000nan@gmail.com</Link> |{' '}
+        <Link src="https://nanimal.dev">nanimal.dev</Link> |{' '}
+        <Link src="https://www.linkedin.com/in/nan-wroblewski-09547a224/">LinkedIn</Link>
       </Text>
     </View>
   </View>
@@ -128,12 +121,19 @@ const SkillEntry = ({ name, skills }) => (
 );
 
 const Skills = () => (
-  <View>
+  <View style={experienceStyles.container}>
     <Title>Skills</Title>
+    <Text style={skillsStyles.skills}>
+     I'm a Fullstack Developer with 4 years of hands-on experience in MERN and a bunch of other tech stacks. I thrive on effective communication and love collaborating with cross-functional teams, creating an inclusive and collaborative work environment. I'm genuinely excited about bringing my skills and enthusiasm to innovative projects, ready to make a positive impact in the exciting world of web-based software engineering.
+    </Text>
     <SkillEntry
+      name="Key Skills"
       skills={[
-        "Fullstack Developer with three years of experience working with JavaScript, HTML/CSS, and many other tech stacks to communicate effectively and work seamlessly with cross-functional teams while fostering a collborative and inclusive work environment. Eager to contribute my skills and enthusiasm to innovative projects, I am poised to make a positive impact in the realm of web-based software engineering.",
-        "JavaScript • HMTL/CSS • React • Node.js • Java • Springboot • AWS • Agile • Wordpress"
+        "MERN (MongoDB, Express, React, Node)",
+        "AWS (S3 and Lambda)",
+        "OOP Languages and Frameworks (Java, SpringBoot, PHP)",
+        "Agile Methodologies",
+        "WordPress",
       ]}
     />
   </View>
@@ -179,38 +179,47 @@ const Experience = () => (
   <View style={experienceStyles.container}>
     <Title>Professional Experience</Title>
     <ExperienceEntry
-      company="UI/UX Developer"
-      position="Rise Marketing"
-      date="August 2023 - Present"
+      company="Rise Marketing"
+      position="UI/UX Developer"
+      date="August 2023 - April 2024"
       details={[
-        "• Excelled in the development of dynamic and responsive user interfaces using JavaScript and PHP, driving optimal user experiences through intuitive designs.",
-        "• Implemented modern, single-page applications (SPAs) with React, leveraging its component-based architecture to streamline workflows and create reusable UI elements.",
-        "• Championed user-centered design by conducting usability testing, gathering feedback, and ensuring visually appealing, user-friendly, and accessible web applications across devices. Additionally, proactively managed responsive web designs with HTML/CSS and JavaScript, guaranteeing seamless user experiences."
+        "Developed and maintained responsive and user-friendly websites for a private senior health care company using WordPress, React, JavaScript, and Node.js.",
+        "Implemented custom WordPress themes and plugins to meet specific design and functionality requirements, ensuring seamless integration with existing systems.",
+        "Utilized React.js to create dynamic user interfaces, enhancing the user experience and engagement on the website.",
+        "Leveraged JavaScript and Node.js to build backend functionalities, such as user authentication and data processing, ensuring efficient and secure operations.",
+        "Conducted usability testing and gathered feedback to iteratively improve the website's design and functionality, ensuring it meets the needs and preferences of senior users and caregivers.",
+        "Optimized website performance for speed and accessibility, implementing best practices in HTML/CSS, JavaScript, and server-side rendering techniques.",
+        "Collaborated with cross-functional teams including designers, developers, and stakeholders to translate business requirements into effective website solutions, fostering a collaborative and inclusive work environment.",
       ]}
     />
     <ExperienceEntry
-      company="Software Engineer 1"
-      position="JP Morgan Chase & Co."
+      company="JP Morgan Chase & Co."
+      position="Software Engineer 1"
       date="October 2022 - July 2023"
       details={[
-        " • Developed and maintained robust, scalable backend solutions using Java/J2EE and Spring Framework, resulting in a 25% increase in the data analysis efficiency." ,
-        " • Led the development of responsive user interfaces utilizing ReactJS, ensuring optimal user experience." ,
-        " • Implemented CI/CD practices and tools like Jenkins for efficient software delivery." ,
-        " • Contributed to the design and optimization of relational databases such as MySQL." ,
-        " • Implemented containerization using Docker and orchestration with Kubernetes." ,
-        " • Worked on serverless computing and event-driven architectures to enhance system efficiency." ,
-        " • Practiced Agile/Scrum methodologies and utilized Jira for project management." ,
+        "Developed and maintained scalable and reliable applications for a call center environment using Java, React, TypeScript, SpringBoot, and AWS Lambda.",
+        "Implemented backend services and APIs using Java and SpringBoot, ensuring high performance, security, and maintainability of the application.",
+        "Utilized React.js and TypeScript to build intuitive and responsive user interfaces, enhancing the user experience for call center agents and supervisors.",
+        "Leveraged AWS Lambda functions to implement serverless microservices, enabling efficient and cost-effective execution of business logic and data processing tasks.",
+        "Adopted Agile methodology to iteratively deliver features and updates, participating in daily stand-ups, sprint planning, and retrospectives to ensure alignment with project goals and timelines.",
+        "Integrated third-party APIs and services to enhance the functionality of the call center application, such as telephony systems and customer relationship management (CRM) platforms.",
+        "Implemented automated testing and continuous integration/continuous deployment (CI/CD) pipelines to maintain code quality and streamline the deployment process, ensuring rapid delivery of new features and updates.",
+        "Collaborated closely with cross-functional teams including product managers, designers, and QA engineers to translate business requirements into technical solutions, fostering a collaborative and customer-focused development process.",
       ]}
     />
     <ExperienceEntry
-      company="Mentor/Instructor Associate"
-      position="Fullstack Academy"
+      company="Fullstack Academy"
+      position="Instructional Associate/Mentor II"
       date="January 2022 - Present"
       details={[
-        "• Exemplified exceptional quality control, meticulously evaluating student submissions against grading rubrics to ensure compliance with requirements.",
-        "• Served as a dedicated mentor and invaluable support to coding bootcamp students, fostering their success throughout the program and facilitating their smooth transition into the tech industry.",
-        "• Proactively collaborated with instructors to enhance the curriculum and instructional materials, resulting in a superior learning experience and outcomes for students.",
-        "• Demonstrated keen analytical skills by conducting regular assessments of student progress, tracking their learning journeys, and providing targeted feedback for continuous improvement.",
+        "Guided multiple cohorts of students through a comprehensive course on fullstack application development, covering key technologies including JavaScript, SQL, Node.js, and React, as well as best practices in software engineering.",
+        "Facilitated engaging and interactive classroom sessions, providing clear explanations, hands-on exercises, and real-world examples to reinforce learning objectives and deepen understanding.",
+        "Offered personalized support and mentorship to students during office hours, assisting with assignment clarification, debugging code, and addressing any challenges or obstacles they encountered in their learning journey.",
+        "Played a pivotal role in the grading process, meticulously evaluating student assignments against grading rubrics and providing constructive feedback to support their growth and development.",
+        "Demonstrated a commitment to student success by identifying struggling students early on and proactively offering additional support and resources to help them overcome obstacles and achieve their goals.",
+        "Fostered a collaborative and inclusive learning environment, encouraging peer-to-peer collaboration and knowledge sharing among students, and facilitating group projects and coding challenges to reinforce teamwork and communication skills.",
+        "Stayed current with industry trends and best practices in fullstack application development, continually updating course materials and instructional approaches to ensure relevance and effectiveness in preparing students for careers in software engineering.",
+        "Collaborated closely with fellow instructors and program administrators to enhance the curriculum, develop new instructional materials, and implement improvements based on student feedback and performance data.",
       ]}
     />
   </View>
@@ -234,12 +243,13 @@ const educationStyles = StyleSheet.create({
 const Education = () => (
   <View style={educationStyles.container}>
     <Title>Education</Title>
-    <Text style={educationStyles.title}>Certificate in Web Development and Software Engineering | December 2021</Text>
-    <Text style={educationStyles.details}>University Of North Florida (Jacksonville, FL)</Text>
-    <Text style={educationStyles.title}>AWS Cloud Practitioner Certificate | February 2023</Text>
-    <Text style={educationStyles.details}>Amazon Web Services (Remote, PA)</Text>
-    <Text style={educationStyles.title}>Certified Scrum Master | January 2024</Text>
-    <Text style={educationStyles.details}>Scrum Alliance (Denver, CO)</Text>
+    <Text style={educationStyles.title}>University of North Florida, Jacksonville, FL</Text>
+    <Text style={educationStyles.details}>September 2019 - May 2020</Text>
+    <Text style={educationStyles.title}>Certificate of Software Engineering and Web Development | Fullstack Academy | December 2021</Text>
+    <Text style={educationStyles.details}>AWS Cloud Practitioner Certificate | Amazon Web Services | February 2023</Text>
+    <Text style={educationStyles.details}>Credential ID 4P25C0N2T2Q1QW3Y</Text>
+    <Text style={educationStyles.title}>Certified Scrum Master | Scrum Alliance | January 2024</Text>
+    <Text style={educationStyles.details}><Link src="https://bcert.me/bc/html/show-badge.html?b=jpkeagdo">View Here</Link></Text>
   </View>
 );
 
