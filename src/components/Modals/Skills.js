@@ -28,7 +28,7 @@ const Skills = ({ closeFn = () => null, open = false }) => {
     { imageUrl: "/reactLogo.png", text: "React" },
     { imageUrl: "/sqlLogo.png", text: "SQL" },
     { imageUrl: "/javaLogo.png", text: "Java" },
-    { imageUrl: "/phpLogo.png", text: "PHP" },
+    { imageUrl: "/nodejsLogo.png", text: "NodeJS" },
     { imageUrl: "/awsLogo.png", text: "Amazon Web Services" },
     { imageUrl: "/agileLogo.png", text: "Agile Methodologies" },
     { imageUrl: "/wordpressLogo.png", text: "Wordpress" },
